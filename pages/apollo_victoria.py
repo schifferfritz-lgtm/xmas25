@@ -15,7 +15,7 @@ col1.image(Venue_Images[0], caption='Interior', clamp=True)
 col2.image(Venue_Images[1], caption='Building', clamp=True)
 
 st.write('## How to get here:')
-st.write(':performing_arts: Adress: 16 Denman St, London W1D 7DY')
+st.write(':performing_arts: Adress: 17 Wilton Rd, London SW1V 1LG')
 st.write(':round_pushpin: Tube Station: Victoria Station')
 st.write(':railway_car: from AirB&B  via lines: Jubilee & Victoria (20 min)')
 st.write(':walking: 0.1 km, about 2 min')
