@@ -5,4 +5,4 @@ Venue_Images =  ['../data/apollo_victoria_indoor.jpg',
                  '../data/apollo_victoria_map.png']
 
 
-image(Venue_Images[1], caption='Building', clamp=True)
+st.image(Venue_Images[1], caption='Building', clamp=True)
