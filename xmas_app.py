@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_image_select import image_select
 
 st.set_page_config(
-    page_title="xmas2025", page_icon="🖼️",layout='centered'
+    page_title="xmas2025", page_icon="🎁",layout='centered'
 )
 
 make_a_wish = st.Page("pages/Make_a_Wish.py", title="Make a Wish", icon=":material/redeem:",default=True)
