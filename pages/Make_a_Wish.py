@@ -124,7 +124,7 @@ selected_show = f"""
 .badge-view {{ font-size:12px; width:150px; height: 120px; font-weight:400}}
 </style>
 <div>
-    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Show: <br />{st.session_state['selected_musical']} </span>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Show: <br /><pre>  {st.session_state['selected_musical']}</pre> </span>
 </div>
 """
 col1.markdown(selected_show, unsafe_allow_html=True)
