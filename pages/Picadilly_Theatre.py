@@ -16,7 +16,7 @@ col2.image(Venue_Images[1], caption='Building', clamp=True)
 st.write('## How to get here:')
 st.write(':performing_arts: Adress: 16 Denman St, London W1D 7DY')
 st.write(':round_pushpin: Tube Station: Piccadilly Circus Underground Station')
-st.write(':railway_car: via lines: Jubilee & Piccadilly (20 min)')
+st.write(':railway_car: from AirB&B via lines: Jubilee & Piccadilly (20 min)')
 st.write(':walking: 0.2 km, about 3 min')
 
 
