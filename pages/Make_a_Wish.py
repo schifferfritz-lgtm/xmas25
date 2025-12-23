@@ -119,14 +119,14 @@ expander = st.expander('view your selection')
 col1, col2, col3 = expander.columns([1,1,1])
 selected_show = f"""
 <style>
-.badge-sel {{ font-size:12px; width:670px; height: 120px; font-weight:400}}
+.badge-sel {{ font-size:12px; width:100px; height: 120px; font-weight:400}}
 </style>
 <div>
     <span class="badge badge-sel {musicals[st.session_state['selected_musical']]['colour']}"> Selected Show: {st.session_state['selected_musical']}</span>
 </div>
 """
 st.write('')
-st.markdown(selected_show, unsafe_allow_html=True)
+col1.markdown(selected_show, unsafe_allow_html=True)
 
 
 # col1.badge(f"Selected Show: {st.session_state['selected_musical']}", icon=":material/star:", color=musicals[st.session_state['selected_musical']]['colour'])
