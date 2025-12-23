@@ -7,9 +7,9 @@ st.set_page_config(
 )
 
 make_a_wish = st.Page("pages/Make_a_Wish.py", title="Make a Wish", icon=":material/dashboard:",default=True)
-apollo_victoria = st.Page("pages/apollo_victoria.py", title="Apollo Victoria", icon=":performing_arts:")
-picadilly_theatre = st.Page("pages/Picadilly_Theatre.py", title="Picadilly Theatre", icon=":performing_arts:")
-st_martins = st.Page("pages/st_martins.py", title="St. Martin’s Theatre", icon=":performing_arts:")
+apollo_victoria = st.Page("pages/apollo_victoria.py", title="Apollo Victoria", icon=":material/theater_comedy:")
+picadilly_theatre = st.Page("pages/Picadilly_Theatre.py", title="Picadilly Theatre", icon=":material/theater_comedy:")
+st_martins = st.Page("pages/st_martins.py", title="St. Martin’s Theatre", icon=":material/theater_comedy:")
 pg = st.navigation(
     {
         "Your Present" : [make_a_wish],
