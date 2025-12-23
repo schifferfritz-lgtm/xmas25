@@ -8,7 +8,7 @@ musicals = {
     'Dates' : [datetime.datetime(2026, 2, 13, 19, 30),datetime.datetime(2026, 2, 14, 14, 30),datetime.datetime(2026, 2, 14, 19, 30),datetime.datetime(2026, 2, 15, 14, 30),],
     'Run Time' : "2hr 45min.",
     'images' : ["data/Wicked.webp","data/apollo_victoria_map.png"],
-    'colour' : "green"
+    'colour' : "green",
     'description' : "Wicked tells the untold story of Elphaba, the Wicked Witch of the West, and Glinda the Good Witch in one unforgettable show.\
                      Prepare to be amazed by the technical wizardry, dazzling costumes, show-stopping songs, and witty nods to L. Frank Baum’s The Wizard of Oz.\
                      Even though it's one of the longest-running London musicals, Wicked continues redefining modern musical theatre for an entire generation, challenging our preconceptions of good and evil.",
