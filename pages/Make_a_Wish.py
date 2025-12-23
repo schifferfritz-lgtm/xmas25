@@ -150,7 +150,7 @@ sel_date = f"""
 """
 col4.markdown(sel_date, unsafe_allow_html=True)
 col4.write('')
-
+form.write('')
 form.write(f'Please confirm your choices and make a wish.')
 confirm = form.checkbox("confirm choices")
 form.form_submit_button(label="Make a Wish")
