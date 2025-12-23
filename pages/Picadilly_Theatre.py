@@ -2,7 +2,6 @@ import streamlit as st
 from pathlib import Path
 
 st.markdown("# Picadilly Theatre")
-st.sidebar.header("Picadilly Theatre")
 
 path = Path(__file__).parent / "../data"
 Venue_Images =  [f'{path}/picadilly_indoor.jpg',
