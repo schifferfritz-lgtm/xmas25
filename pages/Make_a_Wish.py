@@ -116,6 +116,11 @@ event_time = col2.selectbox(
 )
 
 expander = st.expander('view your selection')
+expander.markdown(
+    f":violet-badge[:material/star: {st.session_state['selected_musical']}] :orange-badge[⚠️ Needs review] :gray-badge[Deprecated]"
+)
+
+
 expander.write(f'Selected Show: {st.session_state['selected_musical']}')
 expander.write(f'Runtime: {musicals[st.session_state['selected_musical']]['Run Time']}')
 expander.write(f'Selected Date: {event_date}')
