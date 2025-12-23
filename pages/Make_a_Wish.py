@@ -76,7 +76,7 @@ selection = f"""
 .blue {{ background: #4c5b6a; }}
 </style>
 <div>
-    <span class="badge badge-sel {musicals[st.session_state['selected_musical']]['colour']}"> {st.session_state['selected_musical']} (:hourglass: Runtime: {musicals[st.session_state['selected_musical']]['Run Time']}) </span>
+    <span class="badge badge-sel {musicals[st.session_state['selected_musical']]['colour']}"> {st.session_state['selected_musical']} (:hourglass_flowing_sand: Runtime: {musicals[st.session_state['selected_musical']]['Run Time']}) </span>
 </div>
 """
 st.markdown(selection, unsafe_allow_html=True)
