@@ -6,7 +6,7 @@ st.sidebar.header("Picadilly Theatre")
 
 path = Path(__file__).parent / "../data"
 Venue_Images =  [f'{path}/picadilly_indoor.jpg',
-                 f'{path}/picadilly_outdoor.jpg',
+                 f'{path}/picadilly_outdoor.jpeg',
                  f'{path}/picadilly_map.png']
 
 
