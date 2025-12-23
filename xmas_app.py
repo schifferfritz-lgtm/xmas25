@@ -59,7 +59,7 @@ pg = st.navigation(
     }
 )
 pg.run()
-
+st.sidebar.success("Venue Information.")
 
 
 st.markdown("# Merry X-mas 2025!")
