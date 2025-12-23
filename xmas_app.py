@@ -81,6 +81,8 @@ if st.session_state.logged_in:
 else:
     pg = st.navigation([login_page])
 
+pg.run()
+
 
 
 st.markdown("# Merry X-mas 2025!")
