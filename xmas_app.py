@@ -27,7 +27,7 @@ musicals = {
     'Venue' : "Victoria Palace Theatre",
     'Dates' : [datetime.datetime(2026, 2, 13, 19, 30),datetime.datetime(2026, 2, 14, 14, 30),datetime.datetime(2026, 2, 14, 19, 30),],
     'Run Time' : "2hr 45min.",
-    'images' : ["data/Hamilton.webp",'data/victoria_palace_map.png',]
+    'images' : ["data/Hamilton.webp",'data/victoria_palace_map.png'],
     'colour' : "gold",
     'description' : "Orphaned at a young age, Hamilton moved to New York in the hope of a better life.\
                      While there, there he impressed those around him with his hunger for revolution and reform.\
@@ -37,7 +37,7 @@ musicals = {
     'Venue' : "St. Martin’s Theatre",
     'Dates' : [datetime.datetime(2026, 2, 13, 19, 30),datetime.datetime(2026, 2, 14, 15, 00),datetime.datetime(2026, 2, 14, 19, 30),],
     'Run Time' : "2hr 00min.",
-    'images' : ["data/mousetrap.webp",'data/st_martin_map.png',]
+    'images' : ["data/mousetrap.webp",'data/st_martin_map.png'],
     'colour' : "blue",
     'description' : "The Mousetrap play follows a group of people gathered in a remote part of the countryside as they discover, to their horror, that there is a murderer in their midst.\
                      Who can it be? One by one, suspicious characters reveal their sordid pasts until, at the last nerve-shredding moment, the play finally unveils the identity and the motive.\
