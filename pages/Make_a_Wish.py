@@ -130,7 +130,7 @@ event_time = col2.selectbox(
 )
 
 
-form = st.form(key="form_settings")
+made_a_wish = st.form(key="form_settings")
 expander = form.expander('view your selection')
 col1, col2, col3, col4 = expander.columns([1,1,1,1])
 selected_show = f"""
@@ -177,6 +177,16 @@ selected_show = f"""
 </div>
 """
 form.markdown(selected_show, unsafe_allow_html=True)
+security = form.text_input("Security Check", "What is the name of the person or animal you love the most?")
 form.write('')
 
 form.form_submit_button(label="Make a Wish")
+
+if made_a_wish:
+  if not confirm:
+    st.write('... please confirm your choices by checking the box.')
+  if security.lower() == 'joshua':
+    st.write('... nice try, but I know it is not me.')
+  elif security.lower() != 'shelley':
+    st.write('Security question was not answered correctly.')
+  
