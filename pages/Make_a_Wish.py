@@ -220,7 +220,6 @@ if wished:
                                 f"Selected Time: {event_time}",
                                 f"Message: {message}",
                                )  # Create empty file
-                    return file_path
                 except OSError as e:
                     raise RuntimeError(f"Failed to create file: {e}")
             counter += 1
