@@ -53,6 +53,7 @@ if 'previous_example_index' not in st.session_state:
     st.session_state["previous_example_index"] = 0
 
 info_expander = st.expander("How to make a wish?")
+info_expander.write('Merry Christmas!')
 
 index_selected = image_select(
     "",
