@@ -53,7 +53,7 @@ if 'previous_example_index' not in st.session_state:
     st.session_state["previous_example_index"] = 0
 
 info_expander = st.expander("How to make a wish?")
-selected_show = f"""
+explanation = f"""
 <style>
 .badge {{ display:inline-block; border-radius:12px; color:#fff; padding:6px 10px; margin-right:8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }}
 .badge-hello {{ font-size:16px; width:670px; height: 50px; font-weight:600}}
@@ -63,10 +63,14 @@ selected_show = f"""
 .blue {{ background: #4c5b6a; }}
 </style>
 <div>
-    <span class="badge badge-hello gray"> Merry Christmas  </span>
+    <span class="badge badge-hello gray"> Buon Natale, mio piccolo pesciolino!\
+    <br />Hai già indovinato il tuo regalo, ma devi ancora sceglierlo.\
+    <br />Per consegnartelo proprio il giorno di Natale, ecco un’app tutta per te.\
+    <br />Fai la tua scelta cliccando su un’immagine e mandami il tuo desiderio con il pulsante “Make a Wish” qui sotto.\
+    <br />Ti amo. </span> 
 </div>
 """
-info_expander.markdown(selected_show, unsafe_allow_html=True)
+info_expander.markdown(explanation, unsafe_allow_html=True)
 info_expander.write('')
 
 index_selected = image_select(
@@ -86,11 +90,7 @@ selection = f"""
 .badge-sel {{ font-size:24px; width:670px; height: 50px; font-weight:700}}
 </style>
 <div>
-    <span class="badge badge-sel {musicals[st.session_state['selected_musical']]['colour']}"> Buon Natale, mio piccolo pesciolino!\
-    <br />Hai già indovinato il tuo regalo, ma devi ancora sceglierlo.\
-    <br />Per consegnartelo proprio il giorno di Natale, ecco un’app tutta per te.\
-    <br />Fai la tua scelta cliccando su un’immagine e mandami il tuo desiderio con il pulsante “Make a Wish” qui sotto.\
-    <br />Ti amo. </span>
+    <span class="badge badge-sel {musicals[st.session_state['selected_musical']]['colour']}"> {st.session_state['selected_musical']} </span>
 </div>
 """
 st.markdown(selection, unsafe_allow_html=True)
