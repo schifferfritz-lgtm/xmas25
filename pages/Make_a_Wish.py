@@ -186,12 +186,12 @@ wished = made_a_wish.form_submit_button(label="Make a Wish", disabled=st.session
 
 if wished:
   if not confirm:
-    st.write('... please confirm your choices by checking the box.')
+    st.write('   Please confirm your choices by checking the box.')
   if confirm and security.lower() == 'joshua':
     st.write('... nice try, but I know it is not me.')
     pass
   elif confirm and security.lower() == 'shelley':
     st.session_state["wish_used"] = True
-    st.write('Merry Christmas!')
-  else:
-     st.write('Security question was not answered correctly.')
+    st.write('   Merry Christmas!')
+  elif confirm:
+     st.write('   Security question was not answered correctly.')
