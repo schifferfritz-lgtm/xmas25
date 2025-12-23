@@ -51,6 +51,8 @@ if 'selected_musical' not in st.session_state:
     st.session_state["selected_musical"] = 'Wicked'
 if 'previous_example_index' not in st.session_state:
     st.session_state["previous_example_index"] = 0
+if 'wish_used' not in st.session_state:
+    st.session_state["wish_used"] = False
 
 info_expander = st.expander("How to make a wish?")
 explanation = f"""
@@ -185,8 +187,11 @@ wished = made_a_wish.form_submit_button(label="Make a Wish")
 if wished:
   if not confirm:
     st.write('... please confirm your choices by checking the box.')
+    pass
   if security.lower() == 'joshua':
     st.write('... nice try, but I know it is not me.')
-  elif security.lower() != 'shelley':
+    pass
+  if security.lower() != 'shelley':
     st.write('Security question was not answered correctly.')
+    pass
   
