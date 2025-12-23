@@ -50,7 +50,7 @@ st.set_page_config(
     page_title="xmas2025", page_icon="🖼️",layout='centered'
 )
 
-apollo_victoria = st.Page("pages/apollo_victoria.py", title="Apollo Victoria", icon=":material/dashboard:")
+apollo_victoria = st.Page("pages/apollo_victoria.py", title="Apollo Victoria", icon=":material/dashboard:",default=True)
 picadilly_theatre = st.Page("pages/Picadilly_Theatre.py", title="Picadilly Theatre", icon=":material/dashboard:")
 pg = st.navigation(
     {
