@@ -10,9 +10,11 @@ Venue_Images =  [f'{path}/picadilly_indoor.jpg',
                  f'{path}/picadilly_map.png']
 
 col1, col2 = st.columns([1,1])
-col1.image(Venue_Images[1], caption='Building', clamp=True)
-col2.image(Venue_Images[1], caption='Interior', clamp=True)
+col1.image(Venue_Images[0], caption='Interior', clamp=True)
+col2.image(Venue_Images[1], caption='Building', clamp=True)
 
-col1, col2 = st.columns([1,1])
+st.write('## How to get here:')
+
+st.write('## Find it on maps:')
 col1.image(Venue_Images[2], caption='Location', clamp=True)
-col2.write('How to get here:')
+
