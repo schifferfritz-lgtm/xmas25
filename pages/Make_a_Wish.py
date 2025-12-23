@@ -130,8 +130,8 @@ event_time = col2.selectbox(
 )
 
 
-made_a_wish = st.form(key="form_settings")
-expander = form.expander('view your selection')
+form = st.form(key="form_settings")
+expander = made_a_wish.expander('view your selection')
 col1, col2, col3, col4 = expander.columns([1,1,1,1])
 selected_show = f"""
 <style>
@@ -164,9 +164,9 @@ sel_date = f"""
 """
 col4.markdown(sel_date, unsafe_allow_html=True)
 col4.write('')
-form.write('')
-form.write(f'Please confirm your choices and make a wish.')
-confirm = form.checkbox("confirm choices")
+made_a_wish.write('')
+made_a_wish.write(f'Please confirm your choices and make a wish.')
+confirm = made_a_wish.checkbox("confirm choices")
 selected_show = f"""
 <style>
 .gray {{ background: #6b7280; }}
@@ -176,11 +176,11 @@ selected_show = f"""
     <span class="badge badge-confirm gray"> *by selecting "confirm choices" I also confirm that I do <b>not</b> belong to the naughty list and am eligable for a christmas gift.  </span>
 </div>
 """
-form.markdown(selected_show, unsafe_allow_html=True)
-security = form.text_input("Security Check", "What is the name of the person or animal you love the most?")
-form.write('')
+made_a_wish.markdown(selected_show, unsafe_allow_html=True)
+security = made_a_wish.text_input("Security Check", "What is the name of the person or animal you love the most?")
+made_a_wish.write('')
 
-form.form_submit_button(label="Make a Wish")
+made_a_wish.form_submit_button(label="Make a Wish")
 
 if made_a_wish:
   if not confirm:
