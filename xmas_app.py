@@ -47,7 +47,7 @@ musicals = {
 
 
 st.set_page_config(
-    page_title="xmas2025", page_icon="🖼️", initial_sidebar_state="collapsed",layout='centered'
+    page_title="xmas2025", page_icon="🖼️",layout='centered'
 )
 
 apollo_victoria = st.Page(
