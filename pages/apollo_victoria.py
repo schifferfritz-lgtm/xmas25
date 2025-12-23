@@ -1,8 +1,11 @@
 import streamlit as st
+from pathlib import Path
 
-Venue_Images =  ['../data/apollo_victoria_indoor.jpg',
-                 '../data/apollo_victoria_outdoor.jpg',
-                 '../data/apollo_victoria_map.png']
+path = Path(__file__).parent / "../data"
+
+Venue_Images =  [f'{path}/apollo_victoria_indoor.jpg',
+                 f'{path}/apollo_victoria_outdoor.jpg',
+                 f'{path}/apollo_victoria_map.png']
 
 
 st.image(Venue_Images[1], caption='Building', clamp=True)
