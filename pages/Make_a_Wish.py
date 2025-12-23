@@ -76,7 +76,7 @@ selection = f"""
 .blue {{ background: #4c5b6a; }}
 </style>
 <div>
-    <span class="badge badge-sel {musicals[st.session_state['selected_musical']]['colour']}"> {st.session_state['selected_musical']} (:material/hourglass: Runtime: {musicals[st.session_state['selected_musical']]['Run Time']}) </span>
+    <span class="badge badge-sel {musicals[st.session_state['selected_musical']]['colour']}"> {st.session_state['selected_musical']} </span>
 </div>
 """
 st.markdown(selection, unsafe_allow_html=True)
@@ -117,6 +117,7 @@ event_time = col2.selectbox(
 
 expander = st.expander('view your selection')
 expander.write(f'Selected Show: {st.session_state['selected_musical']}')
+expander.write(f'Runtime: {musicals[st.session_state['selected_musical']]['Run Time']}')
 expander.write(f'Selected Date: {event_date}')
 expander.write(f'Selected Time: {event_time}')
 expander.write(f'Please confirm your choices and make a wish.')
