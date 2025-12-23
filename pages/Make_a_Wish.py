@@ -64,9 +64,9 @@ explanation = f"""
 </style>
 <div>
     <span class="badge badge-hello gray"> Buon Natale, mio piccolo pesciolino!\
-    <br />Hai già indovinato il tuo regalo, ma devi ancora sceglierlo.\
-    <br />Per consegnartelo proprio il giorno di Natale, ecco un’app tutta per te.\
-    <br />Fai la tua scelta cliccando su un’immagine e mandami il tuo desiderio con il pulsante “Make a Wish” qui sotto.\
+    <br />Even if I don`t see you today here is your present, perfectly on time.\
+    <br />You already guessed what I wanted to give you, but I hope this is still a surprise.\
+    <br />Just click on an image and select a day and time and then click on "Make a Wish".\
     <br />Ti amo. </span> 
 </div>
 """
