@@ -117,8 +117,20 @@ event_time = col2.selectbox(
 
 expander = st.expander('view your selection')
 col1, col2, col3 = expander.columns([1,1,1])
-col1.badge(f"Selected Show: {st.session_state['selected_musical']}", icon=":material/star:", color=musicals[st.session_state['selected_musical']]['colour'])
-col1.badge(f"Runtime: {musicals[st.session_state['selected_musical']]['Run Time']}", icon=":material/hourglass:", color=musicals[st.session_state['selected_musical']]['colour'])
-col2.badge(f"Selected Date: {event_date}", icon=":material/event_available:", color=musicals[st.session_state['selected_musical']]['colour'])
-col3.badge(f"Selected Time: {event_time}", icon=":material/alarm_on:", color=musicals[st.session_state['selected_musical']]['colour'])
+selected_show = f"""
+<style>
+.badge-sel {{ font-size:12px; width:670px; height: 120px; font-weight:400}}
+</style>
+<div>
+    <span class="badge badge-sel {musicals[st.session_state['selected_musical']]['colour']}"> Selected Show: {st.session_state['selected_musical']}</span>
+</div>
+"""
+st.write('')
+st.markdown(selected_show, unsafe_allow_html=True)
+
+
+# col1.badge(f"Selected Show: {st.session_state['selected_musical']}", icon=":material/star:", color=musicals[st.session_state['selected_musical']]['colour'])
+# col1.badge(f"Runtime: {musicals[st.session_state['selected_musical']]['Run Time']}", icon=":material/hourglass:", color=musicals[st.session_state['selected_musical']]['colour'])
+# col2.badge(f"Selected Date: {event_date}", icon=":material/event_available:", color=musicals[st.session_state['selected_musical']]['colour'])
+# col3.badge(f"Selected Time: {event_time}", icon=":material/alarm_on:", color=musicals[st.session_state['selected_musical']]['colour'])
 expander.write(f'Please confirm your choices and make a wish.')
