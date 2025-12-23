@@ -115,23 +115,41 @@ event_time = col2.selectbox(
     #on_change=event_date,
 )
 
-expander = st.expander('view your selection')
-col1, col2, col3 = expander.columns([1,1,1])
+
+form = st.form(key="form_settings")
+expander = form.expander('view your selection')
+col1, col2, col3, col4 = expander.columns([1,1,1,1])
 selected_show = f"""
 <style>
 .badge-view {{ font-size:12px; width:100px; height: 120px; font-weight:400}}
 </style>
 <div>
-    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Show:</span>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Show: {st.session_state['selected_musical']} </span>
 </div>
 """
-st.write('')
 col1.markdown(selected_show, unsafe_allow_html=True)
-col1.write(st.session_state['selected_musical'])
+col1.write('')
+runtime = f"""
+<div>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Run Time: {musicals[st.session_state['selected_musical']]['Run Time']} </span>
+</div>
+"""
+col2.markdown(runtime, unsafe_allow_html=True)
+col2.write('')
+sel_date = f"""
+<div>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Date: {event_date} </span>
+</div>
+"""
+col3.markdown(sel_date, unsafe_allow_html=True)
+col3.write('')
+sel_date = f"""
+<div>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Time: {event_time} </span>
+</div>
+"""
+col3.markdown(sel_date, unsafe_allow_html=True)
+col3.write('')
 
-
-# col1.badge(f"Selected Show: {st.session_state['selected_musical']}", icon=":material/star:", color=musicals[st.session_state['selected_musical']]['colour'])
-# col1.badge(f"Runtime: {musicals[st.session_state['selected_musical']]['Run Time']}", icon=":material/hourglass:", color=musicals[st.session_state['selected_musical']]['colour'])
-# col2.badge(f"Selected Date: {event_date}", icon=":material/event_available:", color=musicals[st.session_state['selected_musical']]['colour'])
-# col3.badge(f"Selected Time: {event_time}", icon=":material/alarm_on:", color=musicals[st.session_state['selected_musical']]['colour'])
-expander.write(f'Please confirm your choices and make a wish.')
+form.write(f'Please confirm your choices and make a wish.')
+form.form_submit_button(label="Make a Wish")
