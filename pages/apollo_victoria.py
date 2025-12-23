@@ -1,8 +1,6 @@
 import streamlit as st
 from pathlib import Path
 
-st.set_page_config(page_title="Apollo Victoria", page_icon="🌍")
-
 st.markdown("# Apollo Victoria")
 st.sidebar.header("Apollo Victoria")
 
