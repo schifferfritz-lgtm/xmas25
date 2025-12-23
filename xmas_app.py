@@ -13,7 +13,7 @@ st_martins = st.Page("pages/st_martins.py", title="St. Martin’s Theatre", icon
 pg = st.navigation(
     {
         "Your Present" : [make_a_wish],
-        "Venues": [apollo_victoria,picadilly_theatre],
+        "Venues": [apollo_victoria,picadilly_theatre,st_martins],
     }
 )
 pg.run()
