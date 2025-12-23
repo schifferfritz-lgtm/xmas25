@@ -28,7 +28,7 @@ musicals = {
     'Dates' : [datetime.datetime(2026, 2, 13, 19, 30),datetime.datetime(2026, 2, 14, 14, 30),datetime.datetime(2026, 2, 14, 19, 30),],
     'Run Time' : "2hr 45min.",
     'images' : ["data/Hamilton.webp",'data/victoria_palace_map.png'],
-    'colour' : "gold",
+    'colour' : "yellow",
     'description' : "Orphaned at a young age, Hamilton moved to New York in the hope of a better life.\
                      While there, there he impressed those around him with his hunger for revolution and reform.\
                      The story sees Hamilton become George Washington's right-hand man, fall in love, and go on to become the first Secretary of the Treasury of the United States.",
@@ -72,7 +72,7 @@ selection = f"""
 .badge-sel {{ font-size:24px; width:670px; height: 50px; font-weight:700}}
 .green {{ background: #2c715d; }}
 .red {{ background: #5d001e; }}
-.gold {{ background: #c48a04; }}
+.yellow {{ background: #c48a04; }}
 .blue {{ background: #4c5b6a; }}
 </style>
 <div>
@@ -87,7 +87,7 @@ html_description = f"""
 .badge-des {{ font-size:12px; width:670px; height: 120px; font-weight:400}}
 .green {{ background: #2c715d; }}
 .red {{ background: #5d001e; }}
-.gold {{ background: #c48a04; }}
+.yellow {{ background: #c48a04; }}
 .blue {{ background: #4c5b6a; }}
 </style>
 <div>
