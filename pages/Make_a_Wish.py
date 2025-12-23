@@ -1,4 +1,5 @@
 import datetime
+import os
 import streamlit as st
 from streamlit_image_select import image_select
 
@@ -179,7 +180,10 @@ selected_show = f"""
 </div>
 """
 made_a_wish.markdown(selected_show, unsafe_allow_html=True)
+st.write('')
 security = made_a_wish.text_input("Security Check", "What is the name of the person or animal you love the most?")
+st.write('')
+message = made_a_wish.text_input("Your message to Santa Clause", "Enter here an optional message...")
 made_a_wish.write('')
 
 wished = made_a_wish.form_submit_button(label="Make a Wish", disabled=st.session_state["wish_used"])
@@ -193,9 +197,32 @@ if wished:
         st.write('   Please select a time.')
       elif security.lower() == 'joshua':
         st.write('... nice try, but I know it is not me.')
-        pass
       elif security.lower() == 'shelley':
         st.session_state["wish_used"] = True
         st.write('   Merry Christmas!')
+
+        dir_path = 'data'
+        stem, ext = os.path.splitext('Wish.txt')
+        counter = 0
+        while True:
+            # First try without suffix, then with incremented suffix
+            if counter == 0:
+                file_path = dir_path / f"{stem}{ext}"
+            else:
+                file_path = dir_path / f"{stem}_{counter}{ext}"
+    
+            # If file doesn't exist, create it
+            if not file_path.exists():
+                try:
+                    with open(file_path, "w", encoding="utf-8") as f:
+                        f.write(f"Selected Show: {st.session_state['selected_musical']}",
+                                f"Selected Date: {event_date}",
+                                f"Selected Time: {event_time}",
+                                f"Message: {message}",
+                               )  # Create empty file
+                    return file_path
+                except OSError as e:
+                    raise RuntimeError(f"Failed to create file: {e}")
+            counter += 1
       else:
          st.write('   Security question was not answered correctly.')
