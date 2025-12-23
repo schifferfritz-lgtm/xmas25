@@ -182,16 +182,16 @@ made_a_wish.markdown(selected_show, unsafe_allow_html=True)
 security = made_a_wish.text_input("Security Check", "What is the name of the person or animal you love the most?")
 made_a_wish.write('')
 
-wished = made_a_wish.form_submit_button(label="Make a Wish")
+wished = made_a_wish.form_submit_button(label="Make a Wish", disabled=st.session_state["wish_used"])
 
 if wished:
   if not confirm:
     st.write('... please confirm your choices by checking the box.')
-    pass
-  if security.lower() == 'joshua':
+  if confirm and security.lower() == 'joshua':
     st.write('... nice try, but I know it is not me.')
     pass
-  if security.lower() != 'shelley':
-    st.write('Security question was not answered correctly.')
-    pass
-  
+  elif confirm and security.lower() == 'shelley':
+    st.session_state["wish_used"] = True
+    st.write('Merry Christmas!')
+  else:
+     st.write('Security question was not answered correctly.')
