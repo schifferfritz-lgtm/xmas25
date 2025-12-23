@@ -1,5 +1,6 @@
 import datetime
 import os
+import pathlib
 import streamlit as st
 from streamlit_image_select import image_select
 
@@ -201,7 +202,7 @@ if wished:
         st.session_state["wish_used"] = True
         st.write('   Merry Christmas!')
 
-        dir_path = 'data'
+        dir_path = pathlib.Path('data')
         stem, ext = os.path.splitext('Wish.txt')
         counter = 0
         while True:
