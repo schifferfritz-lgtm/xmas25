@@ -124,28 +124,28 @@ selected_show = f"""
 .badge-view {{ font-size:12px; width:150px; height: 90px; font-weight:400}}
 </style>
 <div>
-    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Show: <br />{st.session_state['selected_musical']} </span>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> 🔖 Selected Show: <br />{st.session_state['selected_musical']} </span>
 </div>
 """
 col1.markdown(selected_show, unsafe_allow_html=True)
 col1.write('')
 runtime = f"""
 <div>
-    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Run Time: <br />{musicals[st.session_state['selected_musical']]['Run Time']} </span>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> ⌛ Run Time: <br />{musicals[st.session_state['selected_musical']]['Run Time']} </span>
 </div>
 """
 col2.markdown(runtime, unsafe_allow_html=True)
 col2.write('')
 sel_date = f"""
 <div>
-    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Date: <br />{event_date} </span>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> 📅 Selected Date: <br />{event_date} </span>
 </div>
 """
 col3.markdown(sel_date, unsafe_allow_html=True)
 col3.write('')
 sel_date = f"""
 <div>
-    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Time: <br />{event_time} </span>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> ⏰ Selected Time: <br />{event_time} </span>
 </div>
 """
 col4.markdown(sel_date, unsafe_allow_html=True)
@@ -159,7 +159,7 @@ selected_show = f"""
 .badge-confirm {{ font-size:9px; width:600px; height: 30px; font-weight:400}}
 </style>
 <div>
-    <span class="badge badge-confirm gray"> *by selecting "confirm choices" I also confirm that I do not belong to the naughty list and am eligable for a christmas gift.  </span>
+    <span class="badge badge-confirm gray"> *by selecting "confirm choices" I also confirm that I do <b>not</b> belong to the naughty list and am eligable for a christmas gift.  </span>
 </div>
 """
 form.markdown(selected_show, unsafe_allow_html=True)
