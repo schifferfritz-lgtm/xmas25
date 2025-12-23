@@ -147,7 +147,7 @@ event_date = col2.date_input(
 )
 event_time = col2.selectbox(
     "Time",
-    options=["%s:%s" % (datetime.hour, datetime.minute) for datetime in musicals[st.session_state['selected_musical']]['Dates'] if datetime.date() == event_date],
+    options=["%s:%s" % (dates.hour, dates.minute) for dates in musicals[st.session_state['selected_musical']]['Dates'] if dates.date() == event_date],
     index=None,
     placeholder='select time',
     on_change=event_date,
