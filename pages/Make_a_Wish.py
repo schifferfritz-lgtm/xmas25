@@ -156,13 +156,13 @@ confirm = form.checkbox("confirm choices")
 selected_show = f"""
 <style>
 .gray {{ background: #6b7280; }}
-.badge-confirm {{ font-size:9px; width:600px; height: 90px; font-weight:400}}
+.badge-confirm {{ font-size:9px; width:600px; height: 10px; font-weight:400}}
 </style>
 <div>
     <span class="badge badge-confirm gray"> By selecting "confirm choices" I also confirm that I do not belong to the naughty list and am eligable for a christmas gift.  </span>
 </div>
 """
-col1.markdown(selected_show, unsafe_allow_html=True)
-col1.write('')
+form.markdown(selected_show, unsafe_allow_html=True)
+form.write('')
 
 form.form_submit_button(label="Make a Wish")
