@@ -115,3 +115,8 @@ event_time = col2.selectbox(
     #on_change=event_date,
 )
 
+expander = st.expander('view your selection')
+expander.write(f'Selected Show: {st.session_state['selected_musical']}')
+expander.write(f'Selected Date: {event_date}')
+expander.write(f'Selected Time: {event_time}')
+expander.write(f'Please confirm your choices and make a wish :material/wand_stars:')
