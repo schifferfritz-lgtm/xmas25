@@ -117,10 +117,8 @@ event_time = col2.selectbox(
 
 expander = st.expander('view your selection')
 expander.badge(f"Selected Show: {st.session_state['selected_musical']}", icon=":material/star:", color=musicals[st.session_state['selected_musical']]['colour'])
-
-
-expander.write(f'Selected Show: {st.session_state['selected_musical']}')
-expander.write(f'Runtime: {musicals[st.session_state['selected_musical']]['Run Time']}')
-expander.write(f'Selected Date: {event_date}')
-expander.write(f'Selected Time: {event_time}')
+expander.badge(f"Runtime: {musicals[st.session_state['selected_musical']]['Run Time']}", icon=":material/hourglass:", color=musicals[st.session_state['selected_musical']]['colour'])
+expander.badge(f"Selected Date: {event_date}", icon=":material/star:", color=musicals[st.session_state['selected_musical']]['colour'])
+expander.badge(f"Selected Time: {event_time}", icon=":material/star:", color=musicals[st.session_state['selected_musical']]['colour'])
+expander.badge(f"Selected Show: {st.session_state['selected_musical']}", icon=":material/star:", color=musicals[st.session_state['selected_musical']]['colour'])
 expander.write(f'Please confirm your choices and make a wish.')
