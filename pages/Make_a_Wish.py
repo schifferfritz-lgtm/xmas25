@@ -202,15 +202,15 @@ if wished:
         st.session_state["wish_used"] = True
         st.write('   Merry Christmas!')
 
-        dir_path = pathlib.Path('data')
+        dir_path = Path(__file__).parent / "../data"
         stem, ext = os.path.splitext('Wish.txt')
         counter = 0
         while True:
             # First try without suffix, then with incremented suffix
             if counter == 0:
-                file_path = dir_path + '/' + f"{stem}{ext}"
+                file_path = dir_path / f"{stem}{ext}"
             else:
-                file_path = dir_path + '/' + f"{stem}_{counter}{ext}"
+                file_path = dir_path / f"{stem}_{counter}{ext}"
     
             # If file doesn't exist, create it
             if not file_path.exists():
