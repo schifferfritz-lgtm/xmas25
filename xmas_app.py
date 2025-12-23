@@ -138,7 +138,7 @@ st.write('')
 st.metric(":round_pushpin: Venue", musicals[st.session_state['selected_musical']]['Venue'])
 
 col1, col2 = st.columns([1,1])
-col1.image(musicals[st.session_state['selected_musical']]['Venue_Images'][2], caption='Location', clamp=True)
+col1.image(musicals[st.session_state['selected_musical']]['images'][1], caption='Location', clamp=True)
 event_date = col2.date_input(
     "Schedule your event",
     musicals[st.session_state['selected_musical']]['Dates'][0],
