@@ -130,7 +130,7 @@ event_time = col2.selectbox(
 )
 
 
-form = st.form(key="form_settings")
+made_a_wish = st.form(key="form_settings")
 expander = made_a_wish.expander('view your selection')
 col1, col2, col3, col4 = expander.columns([1,1,1,1])
 selected_show = f"""
