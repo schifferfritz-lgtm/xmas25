@@ -121,35 +121,35 @@ expander = form.expander('view your selection')
 col1, col2, col3, col4 = expander.columns([1,1,1,1])
 selected_show = f"""
 <style>
-.badge-view {{ font-size:12px; width:100px; height: 120px; font-weight:400}}
+.badge-view {{ font-size:12px; width:150px; height: 120px; font-weight:400}}
 </style>
 <div>
-    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Show: {st.session_state['selected_musical']} </span>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Show: <br />{st.session_state['selected_musical']} </span>
 </div>
 """
 col1.markdown(selected_show, unsafe_allow_html=True)
 col1.write('')
 runtime = f"""
 <div>
-    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Run Time: {musicals[st.session_state['selected_musical']]['Run Time']} </span>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Run Time: <br />{musicals[st.session_state['selected_musical']]['Run Time']} </span>
 </div>
 """
 col2.markdown(runtime, unsafe_allow_html=True)
 col2.write('')
 sel_date = f"""
 <div>
-    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Date: {event_date} </span>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Date: <br />{event_date} </span>
 </div>
 """
 col3.markdown(sel_date, unsafe_allow_html=True)
 col3.write('')
 sel_date = f"""
 <div>
-    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Time: {event_time} </span>
+    <span class="badge badge-view {musicals[st.session_state['selected_musical']]['colour']}"> Selected Time: <br />{event_time} </span>
 </div>
 """
-col3.markdown(sel_date, unsafe_allow_html=True)
-col3.write('')
+col4.markdown(sel_date, unsafe_allow_html=True)
+col4.write('')
 
 form.write(f'Please confirm your choices and make a wish.')
 form.form_submit_button(label="Make a Wish")
