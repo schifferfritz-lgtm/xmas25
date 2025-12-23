@@ -16,5 +16,5 @@ col2.image(Venue_Images[1], caption='Building', clamp=True)
 st.write('## How to get here:')
 
 st.write('## Find it on maps:')
-col1.image(Venue_Images[2], caption='Location', clamp=True)
+st.image(Venue_Images[2], caption='Location', clamp=True)
 
