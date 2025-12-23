@@ -56,7 +56,7 @@ info_expander = st.expander("How to make a wish?")
 explanation = f"""
 <style>
 .badge {{ display:inline-block; border-radius:12px; color:#fff; padding:6px 10px; margin-right:8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }}
-.badge-hello {{ font-size:16px; width:670px; height: 50px; font-weight:600}}
+.badge-hello {{ font-size:11px; width:670px; height: 120px; font-weight:600}}
 .green {{ background: #2c715d; }}
 .red {{ background: #5d001e; }}
 .yellow {{ background: #c48a04; }}
