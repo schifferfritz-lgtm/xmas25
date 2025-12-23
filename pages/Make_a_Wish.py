@@ -112,6 +112,6 @@ event_time = col2.selectbox(
     options=["%s:%s" % (dates.hour, str(dates.minute).zfill(2)) for dates in musicals[st.session_state['selected_musical']]['Dates'] if dates.date() == event_date],
     index=None,
     placeholder='select time',
-    on_change=event_date,
+    #on_change=event_date,
 )
 
