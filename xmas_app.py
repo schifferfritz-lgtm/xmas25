@@ -50,15 +50,15 @@ st.set_page_config(
     page_title="xmas2025", page_icon="🖼️",layout='centered'
 )
 
-apollo_victoria = st.Page(
-    "pages/apollo_victoria.py", title="Apollo Victoria", icon=":material/dashboard:", default=True
-)
-pg = st.navigation(
-    {
-        "Venues": [apollo_victoria],
-    }
-)
-pg.run()
+# apollo_victoria = st.Page(
+#     "pages/apollo_victoria.py", title="Apollo Victoria", icon=":material/dashboard:", default=True
+# )
+# pg = st.navigation(
+#     {
+#         "Venues": [apollo_victoria],
+#     }
+# )
+# pg.run()
 st.sidebar.success("Venue Information.")
 
 
