@@ -214,7 +214,7 @@ if wished:
 if st.session_state["wish_used"]:
   selected_show = f"""
   <style>
-  .badge-wish {{ font-size:11px; width:700px; height: 100px; font-weight:600}}
+  .badge-wish {{ font-size:11px; width:705px; height: 100px; font-weight:600}}
   </style>
   <div>
       <span class="badge badge-wish {musicals[st.session_state['selected_musical_final']]['colour']}"> Santa recieved your wish already. <br />
