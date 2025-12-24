@@ -205,24 +205,24 @@ if wished:
         stem, ext = os.path.splitext('_wish.txt')
         counter = 0
         while counter < 1000:
-            # First try without suffix, then with incremented suffix
-            if counter == 0:
-                file_path = dir_path / f"{stem}{ext}"
-            else:
-                file_path = dir_path / f"{stem}_{counter}{ext}"
-    
-            # If file doesn't exist, create it
+          # First try without suffix, then with incremented suffix
+          if counter == 0:
+            file_path = dir_path / f"{stem}{ext}"
+          else:
+            file_path = dir_path / f"{stem}_{counter}{ext}"
+            
+          # If file doesn't exist, create it
             if not file_path.exists():
-               st.write(f'   Creating Wish as {file_path}')
-                try:
-                    with open(file_path, "w", encoding="utf-8") as f:
-                        f.write(f"Selected Show: {st.session_state['selected_musical']}\n\
+              st.write(f'   Creating Wish as {file_path}')
+              try:
+                with open(file_path, "w", encoding="utf-8") as f:
+                  f.write(f"Selected Show: {st.session_state['selected_musical']}\n\
                                 Selected Date: {event_date}\n\
                                 Selected Time: {event_time}\n\
                                 Message: {message}\n"
                                )  # Create file
-                except OSError as e:
-                    raise RuntimeError(f"Failed to create file: {e}")
+              except OSError as e:
+                raise RuntimeError(f"Failed to create file: {e}")
             counter += 1
         st.write('   Merry Christmas!')
       else:
