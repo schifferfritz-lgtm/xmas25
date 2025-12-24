@@ -202,7 +202,7 @@ if wished:
         st.session_state["wish_used"] = True
         st.write('   Merry Christmas!')
 
-        dir_path = Path(__file__).parent / "../data"
+        dir_path = pathlib.Path(__file__).parent / "../data"
         stem, ext = os.path.splitext('Wish.txt')
         counter = 0
         while True:
