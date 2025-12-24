@@ -202,7 +202,7 @@ if wished:
         st.session_state["wish_used"] = True
 
         dir_path = pathlib.Path(__file__).parent / "../data"
-        stem, ext = os.path.splitext('Wish.txt')
+        stem, ext = os.path.splitext('_wish.txt')
         counter = 0
         while True:
             # First try without suffix, then with incremented suffix
