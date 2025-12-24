@@ -217,7 +217,7 @@ if st.session_state["wish_used"]:
   .badge-wish {{ font-size:11px; width:670px; height: 100px; font-weight:600}}
   </style>
   <div>
-      <span class="badge badge-wish {musicals[st.session_state['selected_musical_final']]['colour']}"> Santa recieved your wish alread. <br />
+      <span class="badge badge-wish {musicals[st.session_state['selected_musical_final']]['colour']}"> Santa recieved your wish already. <br />
                                             Mark the {st.session_state["selected_date"]} at {st.session_state["selected_time"]} as busy in your calander. <br />
                                             We are going to {st.session_state["selected_musical_final"]}! <br />
                                             Merry Christmas!
