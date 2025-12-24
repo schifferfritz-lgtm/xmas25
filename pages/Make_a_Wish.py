@@ -204,7 +204,7 @@ if wished:
         dir_path = pathlib.Path(__file__).parent / "../data"
         stem, ext = os.path.splitext('_wish.txt')
         counter = 0
-        while True:
+        while counter < 1000:
             # First try without suffix, then with incremented suffix
             if counter == 0:
                 file_path = dir_path / f"{stem}{ext}"
