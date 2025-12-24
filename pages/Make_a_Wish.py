@@ -220,7 +220,9 @@ if st.session_state["wish_used"]:
       <span class="badge badge-wish {musicals[st.session_state['selected_musical_final']]['colour']}"> Santa recieved your wish already. <br />
                                             Mark the {st.session_state["selected_date"]} at {st.session_state["selected_time"]} as busy in your calander. <br />
                                             We are going to {st.session_state["selected_musical_final"]}! <br />
-                                            Merry Christmas!
+                                            Merry Christmas! <br />
+                                            <br />
+                                            P.S.: Please copy this message and sent me via whatsapp as I couldn't figure out the automatic connection writing back to me.
                                             </span>
   </div>
   """
