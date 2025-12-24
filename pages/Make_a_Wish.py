@@ -213,7 +213,7 @@ if wished:
     
             # If file doesn't exist, create it
             if not file_path.exists():
-               st.write('   Creating Wish as {file_path}')
+               st.write(f'   Creating Wish as {file_path}')
                 try:
                     with open(file_path, "w", encoding="utf-8") as f:
                         f.write(f"Selected Show: {st.session_state['selected_musical']}\n\
