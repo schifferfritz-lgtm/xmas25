@@ -200,7 +200,6 @@ if wished:
         st.write('... nice try, but I know it is not me.')
       elif security.lower() == 'shelley':
         st.session_state["wish_used"] = True
-        st.write('   Merry Christmas!')
 
         dir_path = pathlib.Path(__file__).parent / "../data"
         stem, ext = os.path.splitext('Wish.txt')
@@ -224,5 +223,6 @@ if wished:
                 except OSError as e:
                     raise RuntimeError(f"Failed to create file: {e}")
             counter += 1
+        st.write('   Merry Christmas!')
       else:
          st.write('   Security question was not answered correctly.')
