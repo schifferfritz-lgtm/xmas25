@@ -1,6 +1,4 @@
 import datetime
-import os
-import pathlib
 import streamlit as st
 from streamlit_image_select import image_select
 
@@ -200,30 +198,6 @@ if wished:
         st.write('... nice try, but I know it is not me.')
       elif security.lower() == 'shelley':
         st.session_state["wish_used"] = True
-
-        dir_path = pathlib.Path(__file__).parent / "../data"
-        stem, ext = os.path.splitext('_wish.txt')
-        counter = 0
-        while counter < 1000:
-          # First try without suffix, then with incremented suffix
-          if counter == 0:
-            file_path = dir_path / f"{stem}{ext}"
-          else:
-            file_path = dir_path / f"{stem}_{counter}{ext}"
-            
-          # If file doesn't exist, create it
-            if not file_path.exists():
-              st.write(f'   Creating Wish as {file_path}')
-              try:
-                with open(file_path, "w", encoding="utf-8") as f:
-                  f.write(f"Selected Show: {st.session_state['selected_musical']}\n\
-                                Selected Date: {event_date}\n\
-                                Selected Time: {event_time}\n\
-                                Message: {message}\n"
-                               )  # Create file
-              except OSError as e:
-                raise RuntimeError(f"Failed to create file: {e}")
-            counter += 1
         st.write('   Merry Christmas!')
       else:
          st.write('   Security question was not answered correctly.')
