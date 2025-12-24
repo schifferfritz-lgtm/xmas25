@@ -216,11 +216,11 @@ if wished:
             if not file_path.exists():
                 try:
                     with open(file_path, "w", encoding="utf-8") as f:
-                        f.write(f"Selected Show: {st.session_state['selected_musical']}",
-                                f"Selected Date: {event_date}",
-                                f"Selected Time: {event_time}",
-                                f"Message: {message}",
-                               )  # Create empty file
+                        f.write(f"Selected Show: {st.session_state['selected_musical']}\n/
+                                Selected Date: {event_date}\n/
+                                Selected Time: {event_time}\n/
+                                Message: {message}\n"
+                               )  # Create file
                 except OSError as e:
                     raise RuntimeError(f"Failed to create file: {e}")
             counter += 1
