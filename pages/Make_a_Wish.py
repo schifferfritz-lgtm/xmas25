@@ -1,5 +1,5 @@
 import datetime
-from github import Github
+from github import Github, Auth
 import base64
 import streamlit as st
 from streamlit_image_select import image_select
@@ -214,6 +214,9 @@ if wished:
          st.write('   Security question was not answered correctly.')
 
 if st.session_state["wish_used"]:
+  g = Github(auth=Auth.Token(st.secrets["repo_token"]))
+  st.write('connection to github successfull.')
+  
   selected_show = f"""
   <style>
   .badge-wish {{ font-size:11px; width:705px; height: 100px; font-weight:600}}
