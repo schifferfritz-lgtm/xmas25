@@ -49,6 +49,12 @@ st.markdown("# Merry X-mas 2025!")
 
 if 'selected_musical' not in st.session_state:
     st.session_state["selected_musical"] = 'Wicked'
+if 'selected_musical_final' not in st.session_state:
+    st.session_state["selected_musical_final"] = None
+if 'selected_date' not in st.session_state:
+    st.session_state["selected_date"] = None
+if 'selected_time' not in st.session_state:
+    st.session_state["selected_time"] = None
 if 'previous_example_index' not in st.session_state:
     st.session_state["previous_example_index"] = 0
 if 'wish_used' not in st.session_state:
@@ -198,6 +204,24 @@ if wished:
         st.write('... nice try, but I know it is not me.')
       elif security.lower() == 'shelley':
         st.session_state["wish_used"] = True
+        st.session_state["selected_musical_final"] = st.session_state["selected_musical"]
+        st.session_state["selected_date"] = event_date
+        st.session_state["selected_time"] = event_time
         st.write('   Merry Christmas!')
       else:
          st.write('   Security question was not answered correctly.')
+
+if st.session_state["wish_used"]:
+  selected_show = f"""
+  <style>
+  .badge-wish {{ font-size:11px; width:670px; height: 100px; font-weight:600}}
+  </style>
+  <div>
+      <span class="badge badge-wish {musicals[st.session_state['selected_musical_final']]['colour']}"> Santa recieved your wish alread. <br />
+                                            Mark the {st.session_state["selected_date"]} at {st.session_state["selected_time"]} as busy in your calander. <br />
+                                            We are going to {st.session_state["selected_musical_final"]}! <br />
+                                            Merry Christmas!
+                                            </span>
+  </div>
+  """
+  st.markdown(selected_show, unsafe_allow_html=True)
